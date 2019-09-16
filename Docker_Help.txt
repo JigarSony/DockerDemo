@@ -1,0 +1,36 @@
+DOCKER
+
+https://docs.docker.com/docker-for-mac/install/
+
+Docker —version
+
+
+https://github.com/SeleniumHQ/docker-selenium
+Docker pull selenium/hub
+Docker pull selenium/node-chrome-debug
+Docker pull selenium/node-firefox-debug
+
+
+docker run -d -p 4545:4444 --name selenium-hub selenium/hub
+
+
+http://localhost:4545/
+
+Docker ps -a
+
+Docker rm 
+
+docker run -d -P —link selenium-hub:hub selenium/node-chrome-debug
+Jigars-MacBook-Pro:~ jigarsony$ 
+docker run -d -P --link selenium-hub:hub selenium/node-chrome-debug
+6d2569b21f95b2ff0e11f919dc238dac7d8e5e16dd37a8657d6e6fa9f9a66098
+Jigars-MacBook-Pro:~ jigarsony$ 
+docker run -d -P --link selenium-hub:hub selenium/node-firefox-debug
+
+http://localhost:4545/grid/console
+
+docker run -d -P —link selenium-hub:hub selenium/node-firefox-debug
+
+https://www.realvnc.com/en/connect/download/viewer/macos/
+
+Enter port number like 0.0.0.0:32768 - password secret
